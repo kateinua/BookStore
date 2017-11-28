@@ -10,6 +10,7 @@ public class BookStoreTest {
     private BookStore bookStore;
     private BookSpec bookSpec;
     private BookSpec bookSpecF;
+    private BookSpec bookSpecFalse;
     private Book book;
 
 
@@ -18,6 +19,7 @@ public class BookStoreTest {
         bookStore = new BookStore();
         bookSpec = new BookSpec("Vlad S", Genre.CRIME, Type.HARDCOVER, Language.UKRAINIAN);
         bookSpecF = new BookSpec("Winny", Genre.COMEDY, Type.EBOOK, Language.ENGLISH);
+        bookSpecFalse = new BookSpec("Vlad S", Genre.HORROR, Type.AUDIO, Language.UKRAINIAN);
         bookStore.addBook("BB2020", "Who", 20.00, bookSpec);
         bookStore.addBook("FF1234", "Much Funny", 7.00, bookSpecF);
 
@@ -35,6 +37,10 @@ public class BookStoreTest {
             assertTrue(book.getPrice() == 7.00);
             assertTrue(book.getSerialNumber().equals("FF1234"));
             assertTrue(book.getSpec() == bookSpecF);
+
+        }
+        for (Book book : bookStore.search(bookSpecFalse)) {
+            assertTrue(book == null);
         }
     }
 }
