@@ -34,13 +34,17 @@ public class BookStoreTest {
     public void search() throws Exception {
         for (Book book : bookStore.search(bookSpecF)) {
             assertEquals(book.getTitle(), "Much Funny");
+            assertNotEquals(book.getTitle(), "much funny");
             assertTrue(book.getPrice() == 7.00);
+            assertFalse(book.getPrice() == 5.00);
             assertEquals(book.getSerialNumber(), "FF1234");
+            assertNotEquals(book.getSerialNumber(), "ff1234");
             assertEquals(book.getSpec(), bookSpecF);
-
+            assertNotEquals(book.getSpec(), bookSpecFalse);
         }
         for (Book book : bookStore.search(bookSpecFalse)) {
             assertTrue(book == null);
+            assertFalse(book != null);
         }
     }
 }

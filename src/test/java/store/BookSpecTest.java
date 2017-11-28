@@ -21,23 +21,28 @@ public class BookSpecTest {
     @Test
     public void testAuthor() {
         assertTrue(bookSpec.getAuthor().equals("Cindy K"));
+        assertFalse(bookSpec.getAuthor().equals("cindy k"));
     }
     @Test
     public void testGenre() {
         assertEquals(bookSpec.getGenre(), Genre.DRAMA);
         assertEquals(bookSpec.getGenre().toString(), "Drama");
+        assertNotEquals(bookSpec.getGenre().toString(), "drama");
+
     }
 
     @Test
     public void testType() {
         assertEquals(bookSpec.getType(),  Type.PAPERBACK);
         assertEquals(bookSpec.getType().toString(), "Paperback");
+        assertNotEquals(bookSpec.getType().toString(), "paperback");
     }
 
     @Test
     public void testLanguage() {
         assertEquals(bookSpec.getLanguage(), Language.ENGLISH);
         assertEquals(bookSpec.getLanguage().toString(), "English");
+        assertNotEquals(bookSpec.getLanguage().toString(), "english");
     }
 
     @Test
