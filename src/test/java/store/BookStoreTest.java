@@ -18,7 +18,7 @@ public class BookStoreTest {
         bookSpec = new BookSpec("Vlad S", Genre.CRIME, Type.HARDCOVER, Language.UKRAINIAN);
         bookSpecF = new BookSpec("Winny", Genre.COMEDY, Type.EBOOK, Language.ENGLISH);
         bookStore.addBook("BB2020", "Who", 20.00, bookSpec);
-        bookStore.addBook("FF1234", "Much funny", 7.00, bookSpecF);
+        bookStore.addBook("FF1234", "Much Funny", 7.00, bookSpecF);
 
     }
     @Test

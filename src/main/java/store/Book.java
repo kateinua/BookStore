@@ -13,10 +13,10 @@ public class Book {
         this.spec = spec;
     }
 
-    String getSerialNumber() {
+    public String getSerialNumber() {
         return serialNumber;
     }
-    String getTitle() {
+    public String getTitle() {
         return title;
     }
     public double getPrice() {
@@ -25,7 +25,7 @@ public class Book {
     public void setPrice(float price) {
         this.price = price;
     }
-    BookSpec getSpec() {
+    public BookSpec getSpec() {
         return spec;
     }
 }

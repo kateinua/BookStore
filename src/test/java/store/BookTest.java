@@ -13,7 +13,7 @@ public class BookTest {
     @Before
     public void setUp() throws Exception {
         bookSpec = new BookSpec("Cindy K", Genre.DRAMA, Type.PAPERBACK, Language.ENGLISH);
-        book = new Book("AA1010", "Much drama", 10.00, bookSpec);
+        book = new Book("AA1010", "Much Drama", 10.00, bookSpec);
     }
     @Test
     public void testSerialNumber() {
