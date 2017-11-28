@@ -6,7 +6,7 @@ public class BookSpec {
     private Type type;
     private Language language;
 
-    public BookSpec (String author, Genre genre, Type type, Language language) {
+    BookSpec(String author, Genre genre, Type type, Language language) {
         this.author = author;
         this.genre = genre;
         this.type = type;
