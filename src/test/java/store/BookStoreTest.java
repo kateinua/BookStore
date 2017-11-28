@@ -3,11 +3,14 @@ package store;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 public class BookStoreTest {
 
     private BookStore bookStore;
+    private ArrayList<BookSpec> bookSpecs = new ArrayList<>();
     private BookSpec bookSpec;
     private BookSpec bookSpecF;
     private BookSpec bookSpecFalse;
