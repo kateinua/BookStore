@@ -9,7 +9,8 @@ public class BookStore {
         books = new ArrayList<>();
     }
 
-    public void addBook(String serialNumber, String title, double price, BookSpec bookSpec) {
+    public void addBook(String serialNumber, String title,
+                        double price, BookSpec bookSpec) {
         Book book = new Book(serialNumber, title, price, bookSpec);
         books.add(book);
     }
