@@ -3,7 +3,7 @@ package store;
 import java.util.ArrayList;
 
 public class BookStore {
-    private static ArrayList<Book> books;
+    private ArrayList<Book> books;
 
     public BookStore() {
         books = new ArrayList<>();
@@ -20,7 +20,7 @@ public class BookStore {
             }
         } return null;
     }
-    public static ArrayList<Book> search(BookSpec searchSpec) {
+    public ArrayList<Book> search(BookSpec searchSpec) {
         ArrayList<Book> matchingBooks = new ArrayList<>();
         for (Book book : books) {
             if (book.getSpec().matches(searchSpec)) {

@@ -10,6 +10,7 @@ public class BookStoreTest {
     private BookStore bookStore;
     private BookSpec bookSpec;
     private BookSpec bookSpecF;
+    private Book book;
 
 
     @Before
@@ -29,7 +30,7 @@ public class BookStoreTest {
 
     @Test
     public void search() throws Exception {
-        for (Book book: BookStore.search(bookSpecF)) {
+        for (Book book : bookStore.search(bookSpecF)) {
             assertTrue(book.getTitle().equals("Much Funny"));
             assertTrue(book.getPrice() == 7.00);
             assertTrue(book.getSerialNumber().equals("FF1234"));
