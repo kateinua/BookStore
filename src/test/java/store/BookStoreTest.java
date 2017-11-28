@@ -34,7 +34,7 @@ public class BookStoreTest {
     public void search() throws Exception {
         for (Book book : bookStore.search(bookSpecF)) {
             assertEquals(book.getTitle(), "Much Funny");
-            assertEquals(book.getPrice(), 7.00);
+            assertTrue(book.getPrice() == 7.00);
             assertEquals(book.getSerialNumber(), "FF1234");
             assertEquals(book.getSpec(), bookSpecF);
 

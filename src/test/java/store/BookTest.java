@@ -25,7 +25,7 @@ public class BookTest {
     }
     @Test
     public void testPrice() {
-        assertEquals(book.getPrice(),10.00);
+        assertTrue(book.getPrice() == 10.00);
     }
     @Test
     public void testSpec() {
