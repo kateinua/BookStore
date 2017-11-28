@@ -14,18 +14,18 @@ public class Book {
     }
 
     public String getSerialNumber() {
-        return serialNumber;
+        return this.serialNumber;
     }
     public String getTitle() {
-        return title;
+        return this.title;
     }
     public double getPrice() {
-        return price;
+        return this.price;
     }
     public void setPrice(float price) {
         this.price = price;
     }
     public BookSpec getSpec() {
-        return spec;
+        return this.spec;
     }
 }
