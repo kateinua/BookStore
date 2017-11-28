@@ -27,8 +27,7 @@ public class BookSpec {
     }
 
     boolean matches(BookSpec otherSpec) {
-        if (author != null && !author.equals("")
-                && !author.equals(otherSpec.author)) {
+        if (!author.equals(otherSpec.author)) {
             return false;
         }
         if (genre != otherSpec.genre) {
