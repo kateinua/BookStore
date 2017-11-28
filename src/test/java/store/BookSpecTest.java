@@ -24,20 +24,20 @@ public class BookSpecTest {
     }
     @Test
     public void testGenre() {
-        assertTrue(bookSpec.getGenre() == Genre.DRAMA);
-        assertTrue(bookSpec.getGenre().toString().equals("Drama"));
+        assertEquals(bookSpec.getGenre(), Genre.DRAMA);
+        assertEquals(bookSpec.getGenre().toString(), "Drama");
     }
 
     @Test
     public void testType() {
-        assertTrue(bookSpec.getType() == Type.PAPERBACK);
-        assertTrue(bookSpec.getType().toString().equals("Paperback"));
+        assertEquals(bookSpec.getType(),  Type.PAPERBACK);
+        assertEquals(bookSpec.getType().toString(), "Paperback");
     }
 
     @Test
     public void testLanguage() {
-        assertTrue(bookSpec.getLanguage() == Language.ENGLISH);
-        assertTrue(bookSpec.getLanguage().toString().equals("English"));
+        assertEquals(bookSpec.getLanguage(), Language.ENGLISH);
+        assertEquals(bookSpec.getLanguage().toString(), "English");
     }
 
     @Test

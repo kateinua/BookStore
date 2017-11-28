@@ -17,18 +17,18 @@ public class BookTest {
     }
     @Test
     public void testSerialNumber() {
-        assertTrue(book.getSerialNumber().equals("AA1010"));
+        assertEquals(book.getSerialNumber(), "AA1010");
     }
     @Test
     public void testTitle() {
-        assertTrue(book.getTitle().equals("Much Drama"));
+        assertEquals(book.getTitle(), "Much Drama");
     }
     @Test
     public void testPrice() {
-        assertTrue(book.getPrice() == 10.00);
+        assertEquals(book.getPrice(),10.00);
     }
     @Test
     public void testSpec() {
-        assertTrue(book.getSpec() == bookSpec);
+        assertEquals(book.getSpec(), bookSpec);
     }
 }

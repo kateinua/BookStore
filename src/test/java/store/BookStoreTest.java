@@ -33,10 +33,10 @@ public class BookStoreTest {
     @Test
     public void search() throws Exception {
         for (Book book : bookStore.search(bookSpecF)) {
-            assertTrue(book.getTitle().equals("Much Funny"));
-            assertTrue(book.getPrice() == 7.00);
-            assertTrue(book.getSerialNumber().equals("FF1234"));
-            assertTrue(book.getSpec() == bookSpecF);
+            assertEquals(book.getTitle(), "Much Funny");
+            assertEquals(book.getPrice(), 7.00);
+            assertEquals(book.getSerialNumber(), "FF1234");
+            assertEquals(book.getSpec(), bookSpecF);
 
         }
         for (Book book : bookStore.search(bookSpecFalse)) {
