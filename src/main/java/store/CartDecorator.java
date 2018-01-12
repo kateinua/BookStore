@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class CartDecorator implements CartInterface {
 
-    protected Cart cart;
+    Cart cart;
 
-    public CartDecorator(Cart cart) {
+    CartDecorator(Cart cart) {
         this.cart = cart;
     }
 

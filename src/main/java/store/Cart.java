@@ -11,7 +11,8 @@ public class Cart implements CartInterface {
         if (paymentStrategy.pay(getTotalPrice())) {
             deliveryStrategy.deliver(books);
             return true;
-        } else {return false;}
+        }
+        return false;
     }
 
     public double getTotalPrice() {
@@ -45,7 +46,7 @@ public class Cart implements CartInterface {
         return this.deliveryStrategy;
     }
 
-    public Cart() {
+    Cart() {
         this.books = new ArrayList<Book>();
     }
 }
