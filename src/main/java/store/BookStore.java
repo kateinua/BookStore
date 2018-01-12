@@ -3,14 +3,13 @@ package store;
 import java.util.ArrayList;
 
 public class BookStore {
-    private ArrayList<Book> books;
+    private static ArrayList<Book> books;
 
     public BookStore() {
         books = new ArrayList<>();
     }
 
-    public void addBook(String serialNumber, String title,
-                        double price, BookSpec bookSpec) {
+    public void addBook(String serialNumber, String title, double price, BookSpec bookSpec) {
         Book book = new Book(serialNumber, title, price, bookSpec);
         books.add(book);
     }
@@ -21,7 +20,7 @@ public class BookStore {
             }
         } return null;
     }
-    public ArrayList<Book> search(BookSpec searchSpec) {
+    public static ArrayList<Book> search(BookSpec searchSpec) {
         ArrayList<Book> matchingBooks = new ArrayList<>();
         for (Book book : books) {
             if (book.getSpec().matches(searchSpec)) {

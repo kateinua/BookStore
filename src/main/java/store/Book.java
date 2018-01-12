@@ -22,7 +22,9 @@ public class Book {
     public double getPrice() {
         return price;
     }
-
+    public void setPrice(float price) {
+        this.price = price;
+    }
     public BookSpec getSpec() {
         return spec;
     }
